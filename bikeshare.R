@@ -77,18 +77,9 @@ ch$trips <- paste(ch$Start.Station, "to", ch$End.Station)
 ny$trips <- paste(ny$Start.Station, "to", ny$End.Station)
 wa$trips <- paste(wa$Start.Station, "to", wa$End.Station)
 
-get_mode(ch$Start.Station)
-get_mode(ch$End.Station)
-get_mode(ch$trips)
-get_mode(ny$Start.Station)
-get_mode(ny$End.Station)
-get_mode(ny$trips)
-get_mode(wa$Start.Station)
-get_mode(wa$End.Station)
-get_mode(wa$trips)
+get_mode(c(ch$Start.Station, ch$End.Station, ch$trips, ny$Start.Station, ny$End.Station, ny$trips, wa$Start.Station, wa$End.Station, wa$trips))
 
 bikes$trips <- paste(bikes$Start.Station, "to", bikes$End.Station)
-
 
 #3 Trip duration
 #What is the total travel time for users in different cities?
@@ -112,10 +103,9 @@ ggplot(bikes, aes(x = city, y = trip_minutes, fill = city)) +
   theme_minimal()
 
 #Calculate summary stats for each column to answer question with values
-summary(ch)
-summary(ny)
-summary(wa)
-
-#I love R <3
+summary(c(ch, ny, wa))
 
 #Ch-Ch-Ch-Changes
+
+#I really really love R <3
+
