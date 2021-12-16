@@ -105,4 +105,7 @@ ggplot(bikes, aes(x = city, y = trip_minutes, fill = city)) +
 #Calculate summary stats for each column to answer question with values
 summary(c(ch, ny, wa))
 
+#Ch-Ch-Ch-Changes
+
 #I really really love R <3
+
