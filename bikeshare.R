@@ -115,3 +115,5 @@ ggplot(bikes, aes(x = city, y = trip_minutes, fill = city)) +
 summary(ch)
 summary(ny)
 summary(wa)
+
+#I love R <3
